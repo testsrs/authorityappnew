@@ -10,3 +10,18 @@
 [21-Nov-2018 13:33:26 Etc/GMT] PHP Warning:  require(/home3/teamomyt/public_html/authority/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home3/teamomyt/public_html/authority/bootstrap/autoload.php on line 17
 [21-Nov-2018 13:33:26 Etc/GMT] PHP Warning:  require(/home3/teamomyt/public_html/authority/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home3/teamomyt/public_html/authority/bootstrap/autoload.php on line 17
 [21-Nov-2018 13:33:26 Etc/GMT] PHP Fatal error:  require(): Failed opening required '/home3/teamomyt/public_html/authority/bootstrap/../vendor/autoload.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home3/teamomyt/public_html/authority/bootstrap/autoload.php on line 17
+[22-Nov-2018 08:17:48 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Mail' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/UserController.php on line 28
+[22-Nov-2018 08:18:22 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Mail' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/UserController.php on line 28
+[22-Nov-2018 08:18:38 UTC] PHP Fatal error:  Class 'App\Mail' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/UserController.php on line 29
+[22-Nov-2018 08:19:03 UTC] PHP Fatal error:  Class 'App\Mail' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/UserController.php on line 29
+[22-Nov-2018 08:19:12 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Product' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/UserController.php on line 29
+[22-Nov-2018 08:20:23 UTC] PHP Fatal error:  Class 'Product' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/UserController.php on line 30
+[22-Nov-2018 08:22:33 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Mail as Mail because the name is already in use in /home3/teamomyt/public_html/authority/app/Http/Controllers/UserController.php on line 13
+[22-Nov-2018 10:26:52 UTC] PHP Parse error:  syntax error, unexpected ''password'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home3/teamomyt/public_html/authority/app/Http/Controllers/API/UserController.php on line 121
+[22-Nov-2018 10:31:37 UTC] PHP Fatal error:  Class 'App\Http\Controllers\API\Rule' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/API/UserController.php on line 120
+[22-Nov-2018 10:36:58 UTC] PHP Fatal error:  Class 'App\Http\Controllers\API\DB' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/API/UserController.php on line 132
+[22-Nov-2018 11:57:47 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Auth\Validator' not found in /home3/teamomyt/public_html/authority/app/Http/Controllers/Auth/ForgotPasswordController.php on line 39
+[22-Nov-2018 13:14:21 UTC] PHP Parse error:  syntax error, unexpected 't' (T_STRING), expecting ']' in /home3/teamomyt/public_html/authority/app/Http/Controllers/Auth/PasswordResetController.php on line 94
+[22-Nov-2018 13:19:22 UTC] PHP Parse error:  syntax error, unexpected '{' in /home3/teamomyt/public_html/authority/app/Http/Controllers/Auth/PasswordResetController.php on line 24
+[23-Nov-2018 05:05:28 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/teamomyt/public_html/authority/app/Http/Controllers/API/UserController.php on line 182
+[23-Nov-2018 05:06:34 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ']' in /home3/teamomyt/public_html/authority/app/Http/Controllers/API/UserController.php on line 182

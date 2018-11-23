@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 use Auth;
 use App\Http\Controllers\Controller;
 use App\User;
+use Mail;
+use App\Mail\Product;
+
 class UserController extends Controller
 {
     /**
@@ -24,7 +27,10 @@ class UserController extends Controller
     public function index()
     {
 		
-		if(Auth::user()->role ==2){
+		//$user = auth()->user();
+		//Mail::to($user)->send(new Product($user));
+		
+		if(Auth::user()->role =='admin'){
 				 $users = DB::table('users')->get();
 				 
 				 return view('admin.user.index', ['users' => $users]);

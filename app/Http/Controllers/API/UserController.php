@@ -10,6 +10,9 @@ use Validator;
 use DB;
 use Mail;
 use App\Mail\Product;
+use Illuminate\Support\Facades\Input;
+use Image;
+
 
 class UserController extends Controller
 {
@@ -177,5 +180,18 @@ class UserController extends Controller
 				 return response()->json(['status'=>'error','message'=>'You dont have access to this service']);
 		}
 		
+	}
+	
+	public function userImageUpload(){
+		$data = Input::all();
+		//var_dump($data); exit;
+		$png_url = "product-".time().".png";
+		$path = public_path().'images/user/' . $png_url;
+
+		Image::make(file_get_contents($data->photo))->save($path);     
+		$response = array(
+			'status' => 'success',
+		);
+		return Response::json( $response  );
 	}
 }

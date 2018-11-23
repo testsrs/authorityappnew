@@ -7,3 +7,5 @@
 [22-Nov-2018 13:32:18 UTC] PHP Parse error:  syntax error, unexpected '20141012100000' (T_LNUMBER), expecting identifier (T_STRING) in /home3/teamomyt/public_html/authority/database/migrations/2018_11_22_100000_create_password_resets_table.php.php on line 7
 [22-Nov-2018 13:33:11 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '{' in /home3/teamomyt/public_html/authority/database/migrations/2018_11_22_100000_create_password_resets_table.php.php on line 7
 [22-Nov-2018 13:33:47 UTC] PHP Fatal error:  Cannot redeclare class CreatePasswordResetsTable in /home3/teamomyt/public_html/authority/database/migrations/2018_11_22_100000_create_password_resets_table.php.php on line 33
+[23-Nov-2018 07:33:39 Etc/GMT] PHP Fatal error:  Out of memory (allocated 915931136) (tried to allocate 134217728 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/DependencyResolver/Solver.php on line 220
+[23-Nov-2018 07:41:21 Etc/GMT] PHP Fatal error:  Out of memory (allocated 915668992) (tried to allocate 134217728 bytes) in phar:///opt/cpanel/composer/bin/composer/src/Composer/DependencyResolver/Solver.php on line 220

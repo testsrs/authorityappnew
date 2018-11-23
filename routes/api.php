@@ -26,6 +26,7 @@ Route::post('register', 'API\UserController@register');
 Route::group(['middleware' => 'auth:api'], function(){
 	Route::post('details', 'API\UserController@details');
 	Route::post('userlist', 'API\UserController@userList');
+	Route::post('uploadImage', 'API\UserController@userImageUpload');
 });
 
 Route::group([    

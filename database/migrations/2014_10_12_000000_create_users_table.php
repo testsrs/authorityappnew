@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->nullable();
             $table->integer('status')->default('1');;
             $table->string('password');
-            $table->integer('role')->unsigned();
+            $table->string('role');
             $table->string('token')->nullable();
             $table->string('phone')->nullable();
             $table->string('OTP')->nullable();

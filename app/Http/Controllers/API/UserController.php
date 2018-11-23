@@ -11,7 +11,9 @@ use DB;
 use Mail;
 use App\Mail\Product;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\URL;
 use Image;
+
 
 
 class UserController extends Controller
@@ -183,15 +185,30 @@ class UserController extends Controller
 	}
 	
 	public function userImageUpload(){
-		$data = Input::all();
-		//var_dump($data); exit;
-		$png_url = "product-".time().".png";
-		$path = public_path().'images/user/' . $png_url;
-
-		Image::make(file_get_contents($data->photo))->save($path);     
-		$response = array(
-			'status' => 'success',
-		);
-		return Response::json( $response  );
+		
+			$data = Input::all();
+			$png_url = "profile-".time().".jpg";  ## renaming file
+			$path = public_path() . "/images/user/" . $png_url; 
+			$img = $data['photo'];
+			
+			$userId = $data['user_id'];
+			
+			$imageURL = URL::to('/images/user').'/'.$png_url;
+			
+			Image::make($img)->resize(320, 240)->save(public_path() . "/images/user/" . $png_url);
+			
+			
+			$updateStatus = DB::table('users')->where('id', $userId)->update(['avatar' => $imageURL]);
+			
+			if($updateStatus){
+				$user = User::find($userId);
+				return response()->json(['status'=>'success','message'=>'user image updated','user'=>$user]);
+			}
+			
+			return response()->json(['status'=>'error','message'=>'unable to update image']);
+			
+		
 	}
+	
+	
 }

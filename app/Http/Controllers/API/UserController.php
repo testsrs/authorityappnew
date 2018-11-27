@@ -174,6 +174,7 @@ class UserController extends Controller
      */
     
     public function userlist(){
+		print_r(Auth::user()->role);exit;
 		
 		if(Auth::user()->role =='admin'){
 				 $users = DB::table('users')->get();

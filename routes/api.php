@@ -29,6 +29,21 @@ Route::group(['middleware' => 'auth:api'], function(){
 	Route::post('uploadImage', 'API\UserController@userImageUpload');
 });
 
+
+# Group API routes <--START
+Route::group([    
+    'namespace' => 'Auth',    
+    'middleware' => 'api',    
+    'prefix' => 'group'
+], function () {    
+    Route::post('createGroup', 'GroupController@createGroup');
+    Route::post('updateGroup', 'GroupController@updateGroup');
+    Route::post('deleteGroup', 'GroupController@deleteGroup');
+    Route::post('getPendingJoinRequest', 'GroupController@getPendingJoinRequest');
+    
+});
+# Group API routes END-->
+
 Route::group([    
     'namespace' => 'Auth',    
     'middleware' => 'api',    
